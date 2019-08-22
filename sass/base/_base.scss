@@ -1,0 +1,40 @@
+html{
+    //define 1rem
+    font-size:62.5%; //10px
+    // font-size: 1.2vh;
+
+    //order in descending max-width size
+    @include respond(tab-land){
+        font-size:56.25%; //9px
+    };
+    @include respond(tab-port){
+        font-size:50%; //8rem
+    };
+    // not needed as same as tab-port
+    // @include respond(phone){
+    //     font-size:50%;
+    // };
+
+
+    @include respond(big-desktop){
+        font-size:75%;  //12px
+    };
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    box-sizing: border-box;
+
+    padding:3rem;
+    @include respond(tab-port){
+        padding:0;
+    };
+}
